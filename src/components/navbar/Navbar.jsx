@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <>
-    <header className=" relative z-[99] bg-navbar border-b-[2px] border-green-400">
+    <header className="fixed top-0 left-0 right-0 z-[99] z-[99] bg-navbar border-b-[2px] border-green-400">
       <nav className="container flex items-center justify-between h-[100px] py-10">
         {/*Logo section*/}
         <div className="h-[100px] w-[145px] overflow-hidden flex items-center justify-center">

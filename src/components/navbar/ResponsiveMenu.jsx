@@ -22,7 +22,7 @@ const ResponsiveMenu = ({ showMenu }) => {
             <li>
                 <a href="#">Contact</a>
             </li>
-        </ul>f
+        </ul>
       </nav>
       <div className="footer">
         <h1>© 2025 All Rights Reserved</h1>

@@ -41,7 +41,7 @@ const AboutUsPage = () => {
 
           <div className="space-y-6 md:px-6 text-gray-700 dark:text-gray-300 -translate-y-4">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 dark:text-white">
-              About EV Garaz
+              About Us
             </h2>
             <p className="text-base sm:text-lg leading-relaxed">
               EV GARAZ is a forward-thinking MSME startup based in Bhubaneswar, Odisha,
@@ -59,7 +59,7 @@ const AboutUsPage = () => {
               href="#contact"
               className="inline-block bg-green-600 text-white px-6 py-3 rounded-xl text-base font-medium hover:bg-green-700 transition"
             >
-              Join Us / Contact Us
+              Join Us
             </a>
           </div>
         </div>
@@ -93,7 +93,7 @@ const AboutUsPage = () => {
                 >
                   <div className="absolute -left-3 top-1 w-3 h-3 bg-green-500 rounded-full"></div>
                   <p className="text-base sm:text-lg font-medium text-gray-700 dark:text-gray-300">
-                    <span className="font-bold text-green-600 dark:text-green-400">{milestone.date}</span> – {milestone.description}
+                    <span className="font-bold text-green-600 dark:text-green-400">{milestone.date}</span> - {milestone.description}
                   </p>
                 </div>
               ))}
