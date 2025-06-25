@@ -4,6 +4,7 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      scrollBehavior: ['responsive'],
       colors: {
         butter: "#FCEF91", // 👈 this defines the custom color
         primary: "#22C55E",
