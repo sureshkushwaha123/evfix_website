@@ -4,6 +4,7 @@ import OverviewCounter from "./components/overview-counter/OverviewCounter";
 import About from "./components/about/About";
 import SimpleBanner from "./components/simpleBanner/SimpleBanner";
 import Footer from "./components/footer/Footer";
+import Services from "./components/services/Services";
 
 function App() {
   return (
@@ -18,12 +19,15 @@ function App() {
         <About />
       </div>
 
-      <div id="services">
+      <div id="">
         <OverviewCounter />
       </div>
 
       <div id="policy">
         <SimpleBanner />
+      </div>
+      <div id="services" >
+        <Services />
       </div>
 
       <div id="contact">
