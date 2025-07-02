@@ -1,24 +1,38 @@
 import React, { useState } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 import { FaCaretDown } from "react-icons/fa";
-import logo from '../../assets/logo.png';
+import logo from "../../assets/logo.png";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
+  const goToSection = (id) => {
+    if (location.pathname === "/") {
+      // Already on home, scroll directly
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to home with scroll target
+      navigate(`/?scrollTo=${id}`);
+    }
+  };
+
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-[99] bg-navbar border-b-[2px] border-green-400">
+      <header className="fixed top-0 left-0 right-0 z-[99] bg-navbar border-b-[4px] border-white">
         <nav className="w-full px-4 flex justify-between items-center h-[100px] py-10">
           {/* Logo section */}
           <div className="h-[100px] w-[145px] overflow-hidden flex items-center justify-center">
-            <a href="#home">
+            <a href="/">
               <img src={logo} alt="Logo" className="object-contain brightness-5" />
             </a>
           </div>
@@ -28,38 +42,39 @@ const Navbar = () => {
             <ul className="flex items-center gap-10 text-black">
               {/* Home dropdown */}
               <li className="group relative cursor-pointer">
-                <a href="#home" className="flex items-center gap-[2px] h-[72px] hover:text-green-500 transition-all">
+                <button
+                  onClick={() => goToSection("home")}
+                  className="flex items-center gap-[2px] h-[72px] hover:text-green-500 transition-all"
+                >
                   Home
                   <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-                </a>
+                </button>
                 {/* Dropdown */}
                 <div className="absolute left-0 top-full z-[99999] hidden w-[150px] bg-gray-100 p-2 text-black group-hover:block shadow-md rounded-md">
                   <ul className="space-y-2">
                     <li>
-                      <a href="#about" className="block p-2 hover:bg-green-500 rounded">About us</a>
+                      <button onClick={() => goToSection("about")} className="block w-full text-left p-2 hover:bg-green-500 rounded">About us</button>
                     </li>
                     <li>
-                      <a href="#services" className="block p-2 hover:bg-green-500 rounded">Services</a>
+                      <button onClick={() => goToSection("services")} className="block w-full text-left p-2 hover:bg-green-500 rounded">Services</button>
                     </li>
                     <li>
-                      <a href="#policy" className="block p-2 hover:bg-green-500 rounded">Privacy policy</a>
+                      <button onClick={() => goToSection("policy")} className="block w-full text-left p-2 hover:bg-green-500 rounded">Privacy policy</button>
                     </li>
                   </ul>
                 </div>
               </li>
 
-              {/* Static section links */}
               <li>
-                <a href="#services" className="hover:text-green-500 transition-all">Services</a>
+                <button onClick={() => goToSection("services")} className="hover:text-green-500 transition-all">Services</button>
               </li>
               <li>
-                <a href="#about" className="hover:text-green-500 transition-all">About us</a>
+                <button onClick={() => goToSection("about")} className="hover:text-green-500 transition-all">About us</button>
               </li>
               <li>
-                <a href="#contact" className="hover:text-green-500 transition-all">Contact</a>
+                <button onClick={() => goToSection("contact")} className="hover:text-green-500 transition-all">Contact</button>
               </li>
 
-              {/* Call info */}
               <li>
                 <div className="flex items-center gap-2">
                   <BiPhoneCall className="text-xl h-[40px] w-[40px] rounded-md p-2 text-white bg-primary hover:bg-green-500" />

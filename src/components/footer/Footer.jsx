@@ -1,185 +1,155 @@
-import React, { useRef, useState } from "react";
+import React from "react";
+import startupIndia from "../../assets/Startup-India.png";
+import startupOdisha from "../../assets/Startup-Odisha.png";
 import {
-  FaEnvelope,
-  FaLocationArrow,
-  FaMobileAlt,
+  FaFacebookF,
   FaInstagram,
-  FaFacebook,
-  FaLinkedin,
+  FaLinkedinIn,
+  FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
 
 const Footer = () => {
-  const formRef = useRef();
-  const [successMsg, setSuccessMsg] = useState("");
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "your_service_id", // Replace with actual EmailJS service ID
-        "your_template_id", // Replace with template ID
-        formRef.current,
-        "your_public_key"   // Replace with public key
-      )
-      .then(
-        () => {
-          setSuccessMsg("Message sent successfully!");
-          formRef.current.reset();
-          setTimeout(() => setSuccessMsg(""), 4000);
-        },
-        (error) => {
-          console.error("FAILED...", error.text);
-          setSuccessMsg("Failed to send message. Please try again.");
-        }
-      );
-  };
-
   return (
-    <div className="relative bg-gradient-to-r from-violet-950 to-violet-900 text-white">
-      {/* Sticky WhatsApp Icon - above footer bar */}
-<a
-  href="https://wa.me/911234567890"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="fixed z-50 bottom-20 right-3 bg-[#25D366] p-4 rounded-full shadow-lg hover:scale-110 transition"
->
-  <FaWhatsapp className="text-white text-2xl" />
-</a>
-
-
-      <section className="mx-auto max-w-[1200px] px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* LEFT CONTAINER */}
-        <div className="flex flex-col gap-8">
-          {/* EvFix Info */}
+    <>
+      <footer className="bg-gradient-to-r from-butter via-green-400 to-green-300 text-gray-800">
+        <div className="max-w-7xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-4 grid-cols-1">
+          {/* Branding */}
           <div>
-            <h1 className="mb-3 text-xl font-bold sm:text-3xl">
+            <h1 className="mb-2 text-5xl font-bold">
               <a href="/#home">
-                Ev<span className="text-primary">Fix</span>
+                EV<span className="text-primary">Fix</span>
               </a>
             </h1>
-            <p className="text-sm text-gray-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate.
-            </p>
-            <div className="mt-5 flex items-start gap-3 text-sm">
-              <FaLocationArrow className="mt-1" />
-              <p>O-Hub, Sez Rd, Chandaka Industrial Estate, Bhubneshwar, Odisha-751024</p>
-            </div>
-            <div className="mt-3 flex items-center gap-3 text-sm">
-              <FaMobileAlt />
-              <p>+91 123456789</p>
-            </div>
-            <div className="mt-3 flex items-center gap-3 text-sm">
-              <FaEnvelope />
-              <p>evfixindia@gmail.com</p>
-            </div>
-          </div>
+            <p className="text-sm mb-3">Helping garages go electric ⚡</p>
 
-          {/* Quick Links - Now Horizontal */}
-          <div>
-  <h2 className="text-xl font-bold mb-4">Quick Links</h2>
-  <ul className="flex flex-wrap gap-6 text-sm">
-    <li>
-      <a
-        href="#home"
-        className="hover:text-green-400 transition-all duration-200"
-      >
-        Home
-      </a>
-    </li>
-    <li>
-      <a
-        href="#about"
-        className="hover:text-green-400 transition-all duration-200"
-      >
-        About Us
-      </a>
-    </li>
-    <li>
-      <a
-        href="#services"
-        className="hover:text-green-400 transition-all duration-200"
-      >
-        Services
-      </a>
-    </li>
-    <li>
-      <a
-        href="#policy"
-        className="hover:text-green-400 transition-all duration-200"
-      >
-        Policy
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-        </div>
-
-        {/* RIGHT CONTAINER */}
-        <div className="flex flex-col gap-8">
-          {/* Contact Form */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Contact Us</h2>
-            <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-4">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Name"
-                  required
-                  className="w-full sm:w-1/2 px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-                <input
-                  name="contact"
-                  type="text"
-                  placeholder="Contact Number"
-                  required
-                  className="w-full sm:w-1/2 px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-              </div>
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                required
-                className="w-full h-[150px] px-4 py-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none"
+            {/* Affiliation Logos */}
+            <div className="flex items-center space-x-4 mt-2">
+              <img
+                src={startupOdisha}
+                alt="Startup Odisha"
+                className="h-16 object-contain"
               />
-              <button
-                type="submit"
-                className="self-start rounded-full bg-primary px-6 py-2 font-semibold text-white hover:bg-opacity-90 transition"
-              >
-                Send Message
-              </button>
-              {successMsg && (
-                <p className="text-sm text-green-400 mt-2">{successMsg}</p>
-              )}
-            </form>
+              <img
+                src={startupIndia}
+                alt="Startup India"
+                className="h-10 object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="/" className="hover:underline">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="hover:underline">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:underline">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Contact</h3>
+            <ul className="text-sm space-y-2">
+              <li className="flex">
+                Email:{" "}
+                <a 
+                  href="mailto:evfixindia@gmail.com"
+                  className="hover:underline "
+                >
+                  evfixindia@gmail.com <br />
+                  hello@evfix.in
+                </a>
+              </li>
+              <li>
+                Phone:{" "}
+                <a href="tel:+919000000000" className="hover:underline">
+                  +91 90000 00000
+                </a>
+              </li>
+              <li>
+                Location: O-Hub 3rd-Floor, Sez Rd, Chandaka Industrial Estate,
+                Bhubneshwar, Odisha-751024
+              </li>
+            </ul>
+          </div>
+
+          {/* Conversion CTA: Become a Partner */}
+          <div>
+            <h3 className="text-lg font-semibold mb-2">Own a Garage?</h3>
+            <p className="text-sm mb-3">
+              Join the EV Garaz network and start servicing electric vehicles in
+              your city. Be part of the future of mobility.
+            </p>
+            <a
+              href="/partner" // here keep the link of crm to join the garage
+              className="inline-block bg-green-600 hover:bg-green-800 text-white px-4 py-2 rounded-md text-sm transition"
+            >
+              Become a Partner
+            </a>
+
+            {/* Social Icons */}
+            <div className="flex space-x-4 mt-6 text-2xl text-gray-800">
+              <a href="#" className="hover:text-green-600">
+                <FaLinkedinIn />
+              </a>
+              <a href="#" className="hover:text-green-600">
+                <FaTwitter />
+              </a>
+              <a href="#" className="hover:text-green-600">
+                <FaInstagram />
+              </a>
+              <a href="#" className="hover:text-green-600">
+                <FaFacebookF />
+              </a>
+            </div>
           </div>
         </div>
-        {/* Right-Aligned Vertical Social Icons (Inside Footer) */}
-<div className="hidden lg:flex flex-col gap-4 absolute top-1/3 -translate-y-1/3 right-3 z-40">
-  <a href="#" className="bg-[#E1306C] p-3 rounded-full hover:scale-110 hover:shadow-lg transition duration-300">
-    <FaInstagram className="text-white text-xl" />
-  </a>
-  <a href="#" className="bg-[#1877F2] p-3 rounded-full hover:scale-110 hover:shadow-lg transition duration-300">
-    <FaFacebook className="text-white text-xl" />
-  </a>
-  <a href="#" className="bg-[#0A66C2] p-3 rounded-full hover:scale-110 hover:shadow-lg transition duration-300">
-    <FaLinkedin className="text-white text-xl" />
-  </a>
-</div>
 
+        <div className="border-t border-gray-800 mt-2"></div>
 
-      </section>
+        {/* Legal Section */}
+        <div className="text-center text-sm py-4">
+          <p>© 2025 EV GARAZ PVT. LTD. All rights reserved.</p>
+          <div className="space-x-4 mt-1">
+            <a href="/privacy" className="hover:underline">
+              Privacy Policy
+            </a>
+            <a href="/terms" className="hover:underline">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </footer>
 
-      {/* Bottom Bar */}
-      <div className="border-t-2 border-gray-300/50 py-6 text-center text-sm">
-        Ev Fix. © 2025 All Rights Reserved
-      </div>
-    </div>
+      {/* Sticky WhatsApp Icon - above footer bar */}
+      <a
+        href="https://wa.me/911234567890"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed z-50 bottom-3 right-3 bg-[#25D366] p-4 rounded-full shadow-lg hover:scale-110 transition"
+      >
+        <FaWhatsapp className="text-white text-2xl" />
+      </a>
+    </>
   );
 };
 

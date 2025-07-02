@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   FaTools,
   FaAmbulance,
@@ -7,7 +7,7 @@ import {
   FaHeadset,
   FaLeaf,
 } from "react-icons/fa";
-
+//  services cards
 const services = [
   {
     id: 1,
@@ -78,17 +78,33 @@ const services = [
 
 const Services = () => {
   const [expandedService, setExpandedService] = useState(null);
+  const servicesRef = useRef(null);
+
+  useEffect(() => {
+    if (expandedService !== null && servicesRef.current) {
+      // Scroll to top of Services section (not inside the expanded card!)
+      servicesRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [expandedService]);
 
   return (
-    <section className="py-20 bg-gray-50 min-h-screen" id="services">
-      <div className="max-w-6xl mx-auto px-4">
+    <section
+      className="bg-gray-200 py-20 snap-start scroll-mt-20"
+      id="services"
+      ref={servicesRef}
+    >
+      <div className="max-w-6xl mx-auto px-2">
         <h2 className="text-4xl font-bold text-center text-green-700 mb-12">
-          Our Services
+          Our Solutions
         </h2>
 
-        <div className="relative transition-all duration-500 ease-in-out">
+        {/* expanded services card */}
+        <div className="transition-all duration-500 ease-in-out">
           {expandedService === null ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {services.map((service) => (
                 <div
                   key={service.id}
@@ -111,11 +127,11 @@ const Services = () => {
               ))}
             </div>
           ) : (
-            <div className="bg-white rounded-2xl p-8 shadow-xl transition-all duration-500 ease-in-out animate-fade-in">
+            <div className="bg-white rounded-2xl p-8 shadow-xl mt-4 text-center">
               {services
                 .filter((s) => s.id === expandedService)
                 .map((service) => (
-                  <div key={service.id} className="text-center">
+                  <div key={service.id}>
                     <div className="flex justify-center mb-6">
                       <div className="bg-green-600 w-12 h-12 flex items-center justify-center rounded-full">
                         {service.icon}
@@ -124,7 +140,7 @@ const Services = () => {
                     <h3 className="text-2xl font-bold text-gray-800 mb-4">
                       {service.title}
                     </h3>
-                    <ul className="list-disc list-inside space-y-3 text-gray-700 mb-6 text-left max-w-2xl mx-auto">
+                    <ul className="list-disc list-inside text-left space-y-3 text-gray-700 mb-6 max-w-xl mx-auto">
                       {service.details.map((point, idx) => (
                         <li key={idx}>{point}</li>
                       ))}
