@@ -1,4 +1,4 @@
-#EV Fix – Official Website
+EV Fix – Official Website
 Welcome to the source code of EV Fix, a modern and responsive company website designed for EV (Electric Vehicle) service awareness and customer engagement. Built with React and TailwindCSS, the site is structured for scalability and easy updates.
 
 📁 #Project Structure
