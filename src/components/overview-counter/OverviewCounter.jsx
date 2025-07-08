@@ -15,7 +15,7 @@ const OverviewCounter = () => {
         <div className="flex flex-col items-center justify-center p-3">
           {/* dark:text-green-300 to enable dark theme in h1 */}
           <h1 className="text-sm font-bold text-black sm:text-lg md:text-3xl">
-            <CountUp end={30} suffix="+" duration={2.75} />
+            <CountUp end={31} suffix="+" duration={2.75} />
           </h1>
           <h1 className="sm:text-md text-xs md:text-lg">Number of Garages</h1>
         </div>

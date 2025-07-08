@@ -58,7 +58,7 @@ const AboutUsPage = () => {
               workshops with the right tools, spare parts, and expert training.
             </p>
             <p className="text-base sm:text-lg">
-              With over <span className="font-semibold text-green-600">21+ garages</span> and
+              With over <span className="font-semibold text-green-600">31+ garages</span> and
               <span className="font-semibold text-green-600"> 150+ mechanics</span>, we’re leading
               India's EV servicing transformation — with faster diagnostics, expert repairs, and
               doorstep services.

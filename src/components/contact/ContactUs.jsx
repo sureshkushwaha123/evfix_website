@@ -1,9 +1,31 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 
 const ContactPage = () => {
   const formRef = useRef();
+  const nameInputRef = useRef(null);
+  const sectionRef = useRef(null);
+
+  // Focus name input when contact section is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          nameInputRef.current?.focus();
+        }
+      },
+      { threshold: 0.6 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +53,11 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white px-4 py-16 md:px-20">
+    <div
+      id="contact"
+      ref={sectionRef}
+      className="min-h-screen bg-white px-4 py-16 md:px-20"
+    >
       {/* Hero */}
       <div className="mb-10 text-center">
         <h1 className="text-4xl font-bold text-green-700 mb-4">Let's Connect</h1>
@@ -69,6 +95,15 @@ const ContactPage = () => {
                 type="text"
                 name="user_name"
                 required
+                ref={nameInputRef}
+                className="w-full p-3 border rounded focus:outline-green-600"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-700 mb-1">Phone</label>
+              <input
+                type="text"
+                name="user_phone"
                 className="w-full p-3 border rounded focus:outline-green-600"
               />
             </div>
@@ -81,14 +116,7 @@ const ContactPage = () => {
                 className="w-full p-3 border rounded focus:outline-green-600"
               />
             </div>
-            <div>
-              <label className="block text-gray-700 mb-1">Phone (optional)</label>
-              <input
-                type="text"
-                name="user_phone"
-                className="w-full p-3 border rounded focus:outline-green-600"
-              />
-            </div>
+            
             <div>
               <label className="block text-gray-700 mb-1">Subject</label>
               <select

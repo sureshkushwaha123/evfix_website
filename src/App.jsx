@@ -40,9 +40,9 @@ function HomePage() {
         <Companies />
       </div>
 
-      <div id="policy">
+      {/* <div id="policy">
         <SimpleBanner />
-      </div>
+      </div> */}
 
       <div id="certificates">
         <Certificates />

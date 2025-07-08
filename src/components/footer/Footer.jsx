@@ -81,13 +81,16 @@ const Footer = () => {
               </li>
               <li>
                 Phone:{" "}
-                <a href="tel:+919000000000" className="hover:underline">
-                  +91 90000 00000
+                <a href="tel:+91 8123747844" className="hover:underline">
+                  +91 8123747844 <br />
+                  +91 9853606237
                 </a>
               </li>
-              <li>
-                Location: O-Hub 3rd-Floor, Sez Rd, Chandaka Industrial Estate,
+              <li><strong>
+                 Location: O-Hub 3rd-Floor, Sez Rd, Chandaka Industrial Estate,
                 Bhubneshwar, Odisha-751024
+              </strong>
+               
               </li>
             </ul>
           </div>
@@ -100,7 +103,7 @@ const Footer = () => {
               your city. Be part of the future of mobility.
             </p>
             <a
-              href="/partner" // here keep the link of crm to join the garage
+              href="#contact" // here keep the link of crm to join the garage
               className="inline-block bg-green-600 hover:bg-green-800 text-white px-4 py-2 rounded-md text-sm transition"
             >
               Become a Partner
@@ -142,7 +145,7 @@ const Footer = () => {
 
       {/* Sticky WhatsApp Icon - above footer bar */}
       <a
-        href="https://wa.me/911234567890"
+        href="https://wa.me/8123747844"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed z-50 bottom-3 right-3 bg-[#25D366] p-4 rounded-full shadow-lg hover:scale-110 transition"

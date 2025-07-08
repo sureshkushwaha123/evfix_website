@@ -3,7 +3,7 @@ import evfix_logo from "../../assets/evfix_logo.png";
 
 const Hero = () => {
   return (
-    <main className="bg-gradient-to-r from-butter via-green-400 to-green-300 text-black">
+    <main className="bg-gradient-to-r from-butter via-green-400 to-green-200 text-black">
       <section className="container mx-auto flex min-h-screen flex-col justify-center px-4 py-16 md:flex-row md:items-center">
         <div className="grid w-full grid-cols-1 items-center gap-10 md:grid-cols-2">
 
