@@ -20,7 +20,7 @@ function HomePage() {
     <>
       <Navbar />
 
-      <div id="home">
+      <div id="/">
         <Hero />
       </div>
 

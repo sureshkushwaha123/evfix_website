@@ -4,25 +4,18 @@ import { FaCaretDown } from "react-icons/fa";
 import logo from "../../assets/logo.png";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
-import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  const goToSection = (id) => {
-    if (location.pathname === "/") {
-      // Already on home, scroll directly
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    } else {
-      // Navigate to home with scroll target
-      navigate(`/?scrollTo=${id}`);
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -32,8 +25,12 @@ const Navbar = () => {
         <nav className="w-full px-4 flex justify-between items-center h-[100px] py-10">
           {/* Logo section */}
           <div className="h-[100px] w-[145px] overflow-hidden flex items-center justify-center">
-            <a href="/">
-              <img src={logo} alt="Logo" className="object-contain brightness-5" />
+            <a onClick={() => scrollToSection("/")} className="cursor-pointer">
+              <img
+                src={logo}
+                alt="Logo"
+                className="object-contain brightness-5"
+              />
             </a>
           </div>
 
@@ -43,7 +40,7 @@ const Navbar = () => {
               {/* Home dropdown */}
               <li className="group relative cursor-pointer">
                 <button
-                  onClick={() => goToSection("home")}
+                  onClick={() => scrollToSection("/")}
                   className="flex items-center gap-[2px] h-[72px] hover:text-green-500 transition-all"
                 >
                   Home
@@ -53,26 +50,57 @@ const Navbar = () => {
                 <div className="absolute left-0 top-full z-[99999] hidden w-[150px] bg-gray-100 p-2 text-black group-hover:block shadow-md rounded-md">
                   <ul className="space-y-2">
                     <li>
-                      <button onClick={() => goToSection("about")} className="block w-full text-left p-2 hover:bg-green-500 rounded">About us</button>
+                      <button
+                        onClick={() => scrollToSection("about")}
+                        className="block w-full text-left p-2 hover:bg-green-500 rounded"
+                      >
+                        About us
+                      </button>
                     </li>
                     <li>
-                      <button onClick={() => goToSection("services")} className="block w-full text-left p-2 hover:bg-green-500 rounded">Services</button>
+                      <button
+                        onClick={() => scrollToSection("services")}
+                        className="block w-full text-left p-2 hover:bg-green-500 rounded"
+                      >
+                        Services
+                      </button>
                     </li>
                     <li>
-                      <button onClick={() => goToSection("policy")} className="block w-full text-left p-2 hover:bg-green-500 rounded">Privacy policy</button>
+                      <button
+                        onClick={() => scrollToSection("policy")}
+                        className="block w-full text-left p-2 hover:bg-green-500 rounded"
+                      >
+                        Privacy policy
+                      </button>
                     </li>
                   </ul>
                 </div>
               </li>
 
               <li>
-                <button onClick={() => goToSection("services")} className="hover:text-green-500 transition-all">Services</button>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="hover:text-green-500 transition-all"
+                >
+                  About us
+                </button>
               </li>
               <li>
-                <button onClick={() => goToSection("about")} className="hover:text-green-500 transition-all">About us</button>
+                <button
+                  onClick={() => scrollToSection("services")}
+                  className="hover:text-green-500 transition-all"
+                >
+                  Services
+                </button>
               </li>
+
               <li>
-                <button onClick={() => goToSection("contact")} className="hover:text-green-500 transition-all">Contact</button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="hover:text-green-500 transition-all"
+                >
+                  Contact
+                </button>
               </li>
 
               <li>

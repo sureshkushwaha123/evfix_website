@@ -6,6 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 @layer utilities {
   .bg-navbar {
     @apply bg-gradient-to-r from-butter via-yellow-300 to-yellow-300;
