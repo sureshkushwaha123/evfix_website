@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // ✅ Needed for routing
 
 import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/navbar"; // ⬅ ensure case matches
+import Navbar from "./components/navbar/Navbar"; // ⬅ ensure case matches
 import OverviewCounter from "./components/overview-counter/OverviewCounter";
 import About from "./components/about/About";
 import SimpleBanner from "./components/simpleBanner/SimpleBanner";
