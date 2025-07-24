@@ -33,10 +33,10 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        "your_service_id",     // 🔁 Replace with your actual Service ID
-        "your_template_id",    // 🔁 Replace with your actual Template ID
+        "service_a6g1cxg",     // 🔁 Replace with your actual Service ID
+        "template_pyh6zhu",    // 🔁 Replace with your actual Template ID
         formRef.current,
-        "your_public_key"      // 🔁 Replace with your actual Public Key
+        "cF763QNLA_QZ9Uwls"      // 🔁 Replace with your actual Public Key
       )
       .then(
         () => {
