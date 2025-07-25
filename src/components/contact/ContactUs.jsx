@@ -7,24 +7,20 @@ const ContactPage = () => {
   const nameInputRef = useRef(null);
   const sectionRef = useRef(null);
 
-  // Focus name input when contact section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          nameInputRef.current?.focus();
+          setTimeout(() => {
+            nameInputRef.current?.focus();
+          }, 150); // Delay to let scroll settle
         }
       },
       { threshold: 0.6 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
   }, []);
 
   const handleSubmit = (e) => {
@@ -33,10 +29,10 @@ const ContactPage = () => {
 
     emailjs
       .sendForm(
-        "service_a6g1cxg",     // 🔁 Replace with your actual Service ID
-        "template_pyh6zhu",    // 🔁 Replace with your actual Template ID
+        "service_a6g1cxg",
+        "template_pyh6zhu",
         formRef.current,
-        "cF763QNLA_QZ9Uwls"      // 🔁 Replace with your actual Public Key
+        "cF763QNLA_QZ9Uwls"
       )
       .then(
         () => {
@@ -66,10 +62,10 @@ const ContactPage = () => {
         </p>
       </div>
 
-      {/* Grid: Map + Form */}
+      {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start max-w-6xl mx-auto">
         {/* Map */}
-        <div className="w-full h-[520px] rounded-2xl overflow-hidden shadow-md">
+        <div className="w-full h-[520px] rounded-2xl overflow-hidden shadow-md bg-gray-200">
           <iframe
             title="EV Garaz Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.6873001895206!2d85.79826557429489!3d20.354532781131418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909945d29cb3b%3A0x1b6a81b09a37ff02!2sO-HUB%20(Startup%20Odisha)!5e0!3m2!1sen!2sin!4v1751005858386!5m2!1sen!2sin"
@@ -116,7 +112,6 @@ const ContactPage = () => {
                 className="w-full p-3 border rounded focus:outline-green-600"
               />
             </div>
-            
             <div>
               <label className="block text-gray-700 mb-1">Subject</label>
               <select

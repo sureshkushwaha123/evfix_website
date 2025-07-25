@@ -4,7 +4,7 @@ import evfix_logo from "../../assets/evfix_logo.png";
 const Hero = () => {
   return (
     <main className="bg-gradient-to-r from-butter via-green-400 to-green-200 text-black min-h-screen flex items-center">
-      <section className="container mx-auto px-5 py-16 flex flex-col-reverse md:flex-row items-center justify-between gap-6">
+      <section id="home" className="container mx-auto px-5 py-16 flex flex-col-reverse md:flex-row items-center justify-between gap-6">
         
         {/* Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">

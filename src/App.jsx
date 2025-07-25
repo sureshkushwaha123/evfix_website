@@ -24,7 +24,7 @@ function HomePage() {
         <Hero />
       </div>
 
-      <div id="about">
+      <div id="#about">
         <About />
       </div>
 
@@ -32,23 +32,23 @@ function HomePage() {
         <OverviewCounter />
       </div>
 
-      <div id="services">
+      <div id="#services">
         <Services />
       </div>
 
-      <div id="companies">
+      <div id="#companies">
         <Companies />
       </div>
 
-      {/* <div id="policy">
+      <div id="">
         <SimpleBanner />
-      </div> */}
+      </div>
 
-      <div id="certificates">
+      <div id="#certificates">
         <Certificates />
       </div>
 
-      <div id="contact">
+      <div id="#contact">
         <ContactUs />
       </div>
 
