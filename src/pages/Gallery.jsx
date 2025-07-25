@@ -4,22 +4,23 @@ import Footer from "../components/footer/Footer";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import img4 from "../assets/img4.jpg";
-import img5 from "../assets/img5.png";
-import img6 from "../assets/img6.png";
-import img7 from "../assets/img7.png";
-import img8 from "../assets/img8.png";
-import img9 from "../assets/img9.png";
-import img10 from "../assets/img10.png";
-import img11 from "../assets/img11.png";
-import img12 from "../assets/img12.png";
 
 const images = [
-  img1, img2, img3, img4, img5, img6,
-  img7, img8, img9, img10, img11, img12,
+  "/gallery/img1.jpg",
+  "/gallery/img2.jpg",
+  "/gallery/img3.jpg",
+  "/gallery/img4.jpg",
+  "/gallery/img5.png",
+  "/gallery/img6.png",
+  "/gallery/img7.png",
+  "/gallery/img8.png",
+  "/gallery/img9.png",
+  "/gallery/img10.png",
+  "/gallery/img11.png",
+  "/gallery/img12.png",
+  "/gallery/img13.png",
+  "/gallery/img14.png",
+  "/gallery/img15.jpg",
 ];
 
 const GalleryPage = () => {
