@@ -9,10 +9,10 @@ const Hero = () => {
         {/* Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
-            Welcome to <span className="text-white">EV</span> <span>FiX</span>
+            Welcome to EV<span className="text-white">FiX</span>
           </h1>
           <p className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-            Fix your EV with EVFIX
+            FIX YOUR EV WITH EVFIX
           </p>
           <p className="text-base md:text-lg leading-relaxed text-gray-800 max-w-xl mx-auto md:mx-0 mb-6">
             India's fastest-growing services provider. Join forces with EVFix and supercharge your EV business. Accelerate growth, drive innovation, and power the future of electric mobility.
