@@ -6,13 +6,13 @@ import "swiper/css/pagination";
 
 const videoSlides = [
   {
-    url: "https://www.youtube.com/watch?v=h3FMm8_92E0",
-    title: "Ingogration of new shop",
+    url: "https://www.youtube.com/embed/h3FMm8_92E0",
+    title: "Inauguration of new shop",
     description:
       "ଭବାନୀପାଟଣାରେ EV ଗାଡି ମରାମତି ଓ ସ୍ପେୟାର ସେଣ୍ଟର ଉଦଘାଟିତ ହେଲା",
   },
   {
-    url: "https://www.youtube.com/watch?v=VOwgExk49vc",
+    url: "https://www.youtube.com/embed/VOwgExk49vc",
     title: "EV Fix sponsored battery powered vehicle repairs and spares",
     description:
       "Grand inauguration of EV Fix sponsored battery powered vehicle repair and spare parts center #kalahandi #newstoday #odianews #masihanews #viralvideo"
