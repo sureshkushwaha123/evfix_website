@@ -6,22 +6,16 @@ import "swiper/css/pagination";
 
 const videoSlides = [
   {
-    url: "https://www.youtube.com/embed/JgDNFQ2RaLQ",
-    title: "Sapphire – A New Chapter by Ed Sheeran",
+    url: "https://www.youtube.com/watch?v=h3FMm8_92E0",
+    title: "Ingogration of new shop",
     description:
-      "Experience melodic storytelling like never before. 'Sapphire' combines acoustic brilliance with raw emotion—crafted to move hearts and minds."
+      "ଭବାନୀପାଟଣାରେ EV ଗାଡି ମରାମତି ଓ ସ୍ପେୟାର ସେଣ୍ଟର ଉଦଘାଟିତ ହେଲା",
   },
   {
-    url: "https://www.youtube.com/embed/ScMzIvxBSi4",
-    title: "Echoes of Harmony",
+    url: "https://www.youtube.com/watch?v=VOwgExk49vc",
+    title: "EV Fix sponsored battery powered vehicle repairs and spares",
     description:
-      "Visual rhythms blend seamlessly with sound. Dive into dynamic performance and discover the symphony behind the scenes."
-  },
-  {
-    url: "https://www.youtube.com/embed/E7wJTI-1dvQ",
-    title: "Cinematic Pulse",
-    description:
-      "Every beat tells a story. A visual journey with striking vocals, Sapphire pulses with cinematic depth and lyrical intensity."
+      "Grand inauguration of EV Fix sponsored battery powered vehicle repair and spare parts center #kalahandi #newstoday #odianews #masihanews #viralvideo"
   }
 ];
 
