@@ -68,11 +68,11 @@ const ContactPage = () => {
         <div className="w-full h-[520px] rounded-2xl overflow-hidden shadow-md bg-gray-200">
           <iframe
             title="EV Garaz Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.6873001895206!2d85.79826557429489!3d20.354532781131418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909945d29cb3b%3A0x1b6a81b09a37ff02!2sO-HUB%20(Startup%20Odisha)!5e0!3m2!1sen!2sin!4v1751005858386!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.6873001895115!2d85.79826557429489!3d20.354532781131418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909945d29cb3b%3A0x1b6a81b09a37ff02!2sO-HUB%20(Startup%20Odisha)!5e0!3m2!1sen!2snl!4v1754994264018!5m2!1sen!2snl"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
