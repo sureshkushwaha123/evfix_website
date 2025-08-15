@@ -56,9 +56,12 @@ const ContactPage = () => {
     >
       {/* Hero */}
       <div className="mb-10 text-center">
-        <h1 className="text-4xl font-bold text-green-700 mb-4">Let's Connect</h1>
+        <h1 className="text-4xl font-bold text-green-700 mb-4">
+          Let's Connect
+        </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          We're here to help your garage go electric. Reach out for onboarding, support, or collaborations.
+          We're here to help your garage go electric. Reach out for onboarding,
+          support, or collaborations.
         </p>
       </div>
 
@@ -68,14 +71,14 @@ const ContactPage = () => {
         <div className="w-full h-[520px] rounded-2xl overflow-hidden shadow-md bg-gray-200">
           <iframe
             title="EV Garaz Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.6873001895115!2d85.79826557429489!3d20.354532781131418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909945d29cb3b%3A0x1b6a81b09a37ff02!2sO-HUB%20(Startup%20Odisha)!5e0!3m2!1sen!2snl!4v1754994264018!5m2!1sen!2snl"
+            src="https://www.google.com/maps/embed?pb=..."
             width="600"
             height="450"
-            style="border:0;"
-            allowfullscreen=""
+            style={{ border: 0 }}
+            allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
 
         {/* Form */}
@@ -153,15 +156,21 @@ const ContactPage = () => {
       <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-center">
         <div className="border rounded-xl p-6 hover:shadow-md">
           <h3 className="text-lg font-semibold mb-2">📦 Onboard My Garage</h3>
-          <p className="text-gray-600 text-sm">Get listed as an EV-ready service point.</p>
+          <p className="text-gray-600 text-sm">
+            Get listed as an EV-ready service point.
+          </p>
         </div>
         <div className="border rounded-xl p-6 hover:shadow-md">
           <h3 className="text-lg font-semibold mb-2">🤝 Partner with Us</h3>
-          <p className="text-gray-600 text-sm">Collaborate on EV servicing, training or tech.</p>
+          <p className="text-gray-600 text-sm">
+            Collaborate on EV servicing, training or tech.
+          </p>
         </div>
         <div className="border rounded-xl p-6 hover:shadow-md">
           <h3 className="text-lg font-semibold mb-2">🛠 Support</h3>
-          <p className="text-gray-600 text-sm">Need help? We're here to assist you.</p>
+          <p className="text-gray-600 text-sm">
+            Need help? We're here to assist you.
+          </p>
         </div>
       </div>
     </div>
