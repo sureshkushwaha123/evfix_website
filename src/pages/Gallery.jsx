@@ -29,6 +29,13 @@ const images = [
   "/gallery/img21.jpg",
   "/gallery/img22.jpg",
   "/gallery/img23.jpg",
+  "/gallery/img24.jpg",
+  "/gallery/img25.jpg",
+  "/gallery/img26.jpg",
+  "/gallery/img27.jpg",
+  "/gallery/img28.jpg",
+  "/gallery/img29.jpg",
+  "/gallery/img30.jpg",
 ];
 
 const GalleryPage = () => {
